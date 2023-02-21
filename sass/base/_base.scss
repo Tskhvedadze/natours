@@ -1,0 +1,18 @@
+/* reset css by the global selector '*' */
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+/* set the font related properties to the body tag because this will inherited all the chiled elments */
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    box-sizing: border-box;
+}
