@@ -1,3 +1,18 @@
+/*
+0px - 600px: Phone
+600px - 900px: Tablet portrait
+900px - 1200px: Tablet landscape
+
+[1200px - 1800px] is where our normal styles apply
+1800px + : Big desktop
+*/
+/*
+$breakpoint argument choices:
+- phone
+- tab-port
+- tab-land
+- big-desktop
+*/
 @keyframes moveInLeft {
   0% {
     opacity: 0;
@@ -37,6 +52,15 @@
 /* set the font related properties to the body tag because this will inherited all the chiled elments */
 html {
   font-size: 62.5%; }
+  @media (max-width: 75em) {
+    html {
+      font-size: 56.25%; } }
+  @media (max-width: 56.25em) {
+    html {
+      font-size: 50%; } }
+  @media (min-width: 112.5em) {
+    html {
+      font-size: 75%; } }
 
 body {
   box-sizing: border-box; }
@@ -635,8 +659,7 @@ body {
   .navigation__icon::before, .navigation__icon::after {
     top: -1rem; }
   .navigation__icon::before {
-    top: -0.8rem;
-    transform-origin: right; }
+    top: -0.8rem; }
   .navigation__icon::after {
     top: 0.8rem; }
 
